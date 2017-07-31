@@ -75,7 +75,7 @@ export default class PlayAlbum extends React.Component {
     return (
       <View style={playalbum.main}>
         <Image
-          source={{ uri: item.banner }}
+          source={item.banner}
           style={playalbum.image} />
 
         <View style={playalbum.controllers}>
