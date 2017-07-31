@@ -52,7 +52,7 @@ export default class Login extends React.Component {
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, isLoginForm } = this.state;
     return (
       <LinearGradient
         style={login.main}
@@ -72,7 +72,9 @@ export default class Login extends React.Component {
           <TouchableOpacity
             onPress={this.changeForm}
             style={login.singUp}>
-            <Text style={login.button}>Sing Up</Text>
+            <Text style={login.button}>
+              {isLoginForm ? "Sing Up" : "Cancel"}
+            </Text>
           </TouchableOpacity>
         )}
       </LinearGradient>
