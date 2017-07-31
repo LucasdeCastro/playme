@@ -7,7 +7,7 @@ import Utils from "../utils";
 
 export default class BandsView extends React.Component {
   static navigationOptions = ({ navigation }) => ({
-    title: 'Top Albums',
+    title: '',
     headerLeft: (
       <Utils.IconButton
         type={"MDC"}
