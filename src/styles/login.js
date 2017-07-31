@@ -28,5 +28,17 @@ export default StyleSheet.create({
     color: "#FFF",
     textAlign: "center",
     fontSize: 20
-  }
+  },
+
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderRadius: 2,
+    backgroundColor: "#222",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 5
+  },
+
+  checkboxMain: { flexDirection: "row", marginTop: 15 },
 });

@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from "react";
-import { View } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 
 import Utils from "../../utils";
 import login from "../../styles/login";
@@ -15,7 +15,7 @@ export default class FormLogin extends React.Component {
 
   login = () => {
     const { userName, password } = this.state;
-    if(userName !== "" && password !== ""){
+    if (userName !== "" && password !== "") {
       this.props.onLogin(this.state);
     }
   }
@@ -42,10 +42,20 @@ export default class FormLogin extends React.Component {
           background={"#000"}
           title={'Login'} />
 
-        <Utils.CheckBox
-          value={remember == true}
+        <TouchableOpacity
+          activeOpacity={0.8}
           onPress={this.onChangeRemember}
-          label={"Remember Password"} />
+          style={login.checkboxMain}>
+          <View style={login.checkbox}>
+            {remember && (
+              <Utils.AllIcons
+                type={"FW"}
+                size={15}
+                name={"check"}
+                color={"#FFF"} />)}
+          </View>
+          <Text style={{ color: '#FFF' }}>Remember Password</Text>
+        </TouchableOpacity>
       </View>
     )
   }
